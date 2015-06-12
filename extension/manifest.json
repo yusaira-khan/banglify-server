@@ -1,0 +1,9 @@
+{
+  "name": "Anglify!",
+  "version": "0.0",
+  "manifest_version":2,
+  "description": "Transliterates to Roman script for easy pronunciation",
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
