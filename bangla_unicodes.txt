@@ -1,0 +1,263 @@
+Bengali
+Range: 0980–09FF
+
+This file contains an excerpt from the character code tables and list of character names for
+The Unicode Standard, Version 7.0
+
+This file may be changed at any time without notice to reflect errata or other updates to the Unicode Standard.
+See http://www.unicode.org/errata/ for an up-to-date list of errata.
+
+See http://www.unicode.org/charts/ for access to a complete list of the latest character code charts.
+See http://www.unicode.org/charts/PDF/Unicode-7.0/ for charts showing only the characters added in Unicode 7.0.
+See http://www.unicode.org/Public/7.0.0/charts/ for a complete archived file of character code charts for Unicode 7.0.
+
+Disclaimer
+These charts are provided as the online reference to the character contents of the Unicode Standard, Version 7.0 but do
+not provide all the information needed to fully support individual scripts using the Unicode Standard. For a complete
+understanding of the use of the characters contained in this file, please consult the appropriate sections of The Unicode
+Standard, Version 7.0, online at http://www.unicode.org/versions/Unicode7.0.0/, as well as Unicode Standard Annexes #9,
+#11, #14, #15, #24, #29, #31, #34, #38, #41, #42, #44, and #45, the other Unicode Technical Reports and Standards, and the
+Unicode Character Database, which are available online.
+
+See http://www.unicode.org/ucd/ and http://www.unicode.org/reports/
+
+A thorough understanding of the information contained in these additional sources is required for a successful
+implementation.
+
+Fonts
+The shapes of the reference glyphs used in these code charts are not prescriptive. Considerable variation is to be
+expected in actual fonts. The particular fonts used in these charts were provided to the Unicode Consortium by a number
+of different font designers, who own the rights to the fonts.
+
+See http://www.unicode.org/charts/fonts.html for a list.
+
+Terms of Use
+You may freely use these code charts for personal or internal business uses only. You may not incorporate them either
+wholly or in part into any product or publication, or otherwise distribute them without express written permission from
+the Unicode Consortium. However, you may provide links to these charts.
+
+The fonts and font data used in production of these code charts may NOT be extracted, or used in any other way in any
+product or publication, without permission or license granted by the typeface owner(s).
+
+The Unicode Consortium is not liable for errors or omissions in this file or the standard itself. Information on characters
+added to the Unicode Standard since the publication of the most recent version of the Unicode Standard, as well as on
+characters currently being considered for addition to the Unicode Standard can be found on the Unicode web site.
+
+See http://www.unicode.org/pending/pending.html and http://www.unicode.org/alloc/Pipeline.html.
+
+Copyright © 1991-2014 Unicode, Inc. All rights reserved.
+  0980                                                     Bengali                                 09FF
+
+
+                               098      099      09A      09B     09C      09D       09E    09F
+
+
+                          0     ঀ ঐ ঠ র $ী                                           ৠ ৰ
+                                0980     0990     09A0    09B0     09C0              09E0   09F0
+
+
+
+                          1    $ঁ                ড                 $ু                ৡ ৱ
+                                0981              09A1             09C1              09E1   09F1
+
+
+
+                          2    $ং                ঢ ল $ূ                              $ৢ ৲
+                                0982              09A2    09B2     09C2              09E2   09F2
+
+
+
+                          3    $ঃ ও ণ                              $ৃ                $ৣ ৳
+                                0983     0993     09A3             09C3              09E3   09F3
+
+
+
+                          4             ঔ ত                        $ৄ                       ৴
+                                         0994     09A4             09C4                     09F4
+
+
+
+                          5    অ ক থ                                                        ৵
+                                0985     0995     09A5                                      09F5
+
+
+
+                          6   আ খ দ শ                                                ০ ৶
+                                0986     0996     09A6    09B6                       09E6   09F6
+
+
+
+                          7     ই গ ধ ষ $ে $ৗ ১ ৷
+                                0987     0997     09A7    09B7     09C7     09D7     09E7   09F7
+
+
+
+                          8    ঈ ঘ ন স $ৈ                                            ২ ৸
+                                0988     0998     09A8    09B8     09C8              09E8   09F8
+
+
+
+                          9    উ ঙ                        হ                          ৩ ৹
+                                0989     0999             09B9                       09E9   09F9
+
+
+
+                          A    ঊ চ প                                                 ৪ ৺
+                                098A     099A    09AA                                09EA   09FA
+
+
+
+                          B    ঋ ছ ফ                               $ো                ৫ ৻
+                                098B     099B    09AB              09CB              09EB   09FB
+
+
+
+                          C     ঌ জ ব $় $ৌ ড় ৬
+                                098C     099C    09AC     09BC     09CC     09DC     09EC
+
+
+
+                          D             ঝ ভ ঽ $্ ঢ় ৭
+                                         099D    09AD     09BD     09CD     09DD     09ED
+
+
+
+                          E             ঞ ম $া ৎ                                     ৮
+                                         099E    09AE     09BE     09CE              09EE
+
+
+
+                          F    এ ট য $ি                                     য় ৯
+                                098F     099F    09AF     09BF              09DF     09EF
+
+
+
+The Unicode Standard 7.0, Copyright © 1991-2014 Unicode, Inc. All rights reserved.
+0980                                                    Bengali                                                       09E3
+
+
+The Bengali script is also known as Bangla. In Assam, the      09B3 " <reserved>
+preferred name of the script is Asamiya or Assamese. The       09B4 " <reserved>
+Assamese language has also been written historically using     09B5 " <reserved>
+distinct regional scripts known as Kamrupi.                    09B6 শ BENGALI LETTER SHA
+Various signs                                                  09B7 ষ BENGALI LETTER SSA
+0980 ঀ BENGALI ANJI                                            09B8 স BENGALI LETTER SA
+           = siddham, siddhirastu                              09B9 হ BENGALI LETTER HA
+           • used at the beginning of texts as an invocation   Various signs
+0981 $ঁ BENGALI SIGN CANDRABINDU                               09BC $় BENGALI SIGN NUKTA
+0982 $ং BENGALI SIGN ANUSVARA                                             • for extending the alphabet to new letters
+0983 $ঃ BENGALI SIGN VISARGA                                   09BD ঽ BENGALI SIGN AVAGRAHA
+Independent vowels                                             Dependent vowel signs
+0985 অ BENGALI LETTER A                                        09BE $া BENGALI VOWEL SIGN AA
+0986 আ BENGALI LETTER AA                                       09BF $ি BENGALI VOWEL SIGN I
+0987 ই BENGALI LETTER I                                                • stands to the left of the consonant
+0988 ঈ BENGALI LETTER II                                       09C0 $ী BENGALI VOWEL SIGN II
+0989 উ BENGALI LETTER U                                        09C1 $ু BENGALI VOWEL SIGN U
+098A ঊ BENGALI LETTER UU                                       09C2 $ূ BENGALI VOWEL SIGN UU
+098B ঋ BENGALI LETTER VOCALIC R                                09C3 $ৃ BENGALI VOWEL SIGN VOCALIC R
+098C ঌ BENGALI LETTER VOCALIC L                                09C4 $ৄ BENGALI VOWEL SIGN VOCALIC RR
+098D " <reserved>                                              09C5 " <reserved>
+098E " <reserved>                                              09C6 " <reserved>
+098F এ BENGALI LETTER E                                        09C7 $ে BENGALI VOWEL SIGN E
+0990 ঐ BENGALI LETTER AI                                               • stands to the left of the consonant
+0991 " <reserved>                                              09C8 $ৈ BENGALI VOWEL SIGN AI
+0992 " <reserved>                                                      • stands to the left of the consonant
+0993 ও BENGALI LETTER O                                        Two-part dependent vowel signs
+0994 ঔ BENGALI LETTER AU
+                                                               These vowel signs have glyph pieces which stand on both
+Consonants                                                     sides of the consonant; they follow the consonant in logical
+0995 ক BENGALI LETTER KA                                       order, and should be handled as a unit for most processing.
+0996 খ BENGALI LETTER KHA                                      09CB $ো BENGALI VOWEL SIGN O
+0997 গ BENGALI LETTER GA                                                    ≡ 09C7   $ে   09BE $া  
+0998 ঘ BENGALI LETTER GHA                                      09CC $ৌ BENGALI VOWEL SIGN AU
+0999 ঙ BENGALI LETTER NGA                                                   ≡ 09C7   $ে   09D7 $ৗ 
+099A চ BENGALI LETTER CA                                       Virama
+099B ছ BENGALI LETTER CHA
+                                                               09CD $্     BENGALI SIGN VIRAMA
+099C জ BENGALI LETTER JA
+                                                                           = hasant (Bengali term for halant)
+099D ঝ BENGALI LETTER JHA
+099E ঞ BENGALI LETTER NYA                                      Additional consonant
+099F ট BENGALI LETTER TTA                                      09CE ৎ BENGALI LETTER KHANDA TA
+09A0 ঠ BENGALI LETTER TTHA                                               • a dead consonant form of ta, without implicit
+09A1 ড BENGALI LETTER DDA                                                  vowel, used in some sequences
+09A2 ঢ BENGALI LETTER DDHA                                     Sign
+09A3 ণ BENGALI LETTER NNA                                      09D7   $ৗ BENGALI AU LENGTH MARK
+09A4 ত BENGALI LETTER TA
+                                                               Additional consonants
+09A5 থ BENGALI LETTER THA
+09A6 দ BENGALI LETTER DA                                       09DC ড় BENGALI LETTER RRA
+09A7 ধ BENGALI LETTER DHA                                                ≡ 09A1 ড  09BC $় 
+09A8 ন BENGALI LETTER NA                                       09DD ঢ় BENGALI LETTER RHA
+09A9 " <reserved>                                                        ≡ 09A2 ঢ  09BC $় 
+09AA প BENGALI LETTER PA                                       09DE " <reserved>
+09AB ফ BENGALI LETTER PHA                                      09DF য় BENGALI LETTER YYA
+09AC ব BENGALI LETTER BA                                                 ≡ 09AF য  09BC $় 
+         = Bengali va, wa                                      Additional vowels for Sanskrit
+09AD ভ BENGALI LETTER BHA                                      09E0 ৠ BENGALI LETTER VOCALIC RR
+09AE ম BENGALI LETTER MA                                       09E1 ৡ BENGALI LETTER VOCALIC LL
+09AF য BENGALI LETTER YA                                       09E2 $ৢ BENGALI VOWEL SIGN VOCALIC L
+09B0 র BENGALI LETTER RA                                       09E3 $ৣ BENGALI VOWEL SIGN VOCALIC LL
+09B1 " <reserved>
+09B2 ল BENGALI LETTER LA
+
+                                            The Unicode Standard 7.0, Copyright © 1991-2014 Unicode, Inc. All rights reserved.
+  09E4                                                       Bengali                 09FB
+
+
+  Reserved
+  For viram punctuation, use the generic Indic 0964 and 0965.
+  09E4 " <reserved>
+              → 0964 ।  devanagari danda
+  09E5 " <reserved>
+              → 0965 ॥  devanagari double danda
+  Digits
+  09E6 ০      BENGALI DIGIT ZERO
+  09E7 ১      BENGALI DIGIT ONE
+  09E8 ২      BENGALI DIGIT TWO
+  09E9 ৩      BENGALI DIGIT THREE
+  09EA ৪      BENGALI DIGIT FOUR
+  09EB ৫      BENGALI DIGIT FIVE
+  09EC ৬      BENGALI DIGIT SIX
+  09ED ৭      BENGALI DIGIT SEVEN
+  09EE ৮      BENGALI DIGIT EIGHT
+  09EF ৯      BENGALI DIGIT NINE
+  Additions for Assamese
+  09F0 ৰ BENGALI LETTER RA WITH MIDDLE DIAGONAL
+             = Assamese letter ra
+  09F1 ৱ BENGALI LETTER RA WITH LOWER DIAGONAL
+             = Assamese letter wa
+             = bengali letter va with lower diagonal (1.0)
+  Currency signs
+  09F2 ৲ BENGALI RUPEE MARK
+             = taka
+             • historic currency sign
+  09F3 ৳ BENGALI RUPEE SIGN
+             = Bangladeshi taka
+  Historic symbols for fractional values
+  The use of these signs is not limited to currency, despite the
+  character names.
+  09F4 ৴ BENGALI CURRENCY NUMERATOR ONE
+               • not in current usage
+  09F5 ৵ BENGALI CURRENCY NUMERATOR TWO
+               • not in current usage
+  09F6 ৶ BENGALI CURRENCY NUMERATOR THREE
+               • not in current usage
+  09F7 ৷ BENGALI CURRENCY NUMERATOR FOUR
+  09F8 ৸ BENGALI CURRENCY NUMERATOR ONE LESS
+               THAN THE DENOMINATOR
+  09F9 ৹ BENGALI CURRENCY DENOMINATOR SIXTEEN
+  Sign
+  09FA    ৺ BENGALI ISSHAR
+              = ishvar
+              • represents the name of a deity
+              = svargiya
+              • written before the name of a deceased person
+  Historic currency sign
+  09FB ৻ BENGALI GANDA MARK
+
+
+
+
+The Unicode Standard 7.0, Copyright © 1991-2014 Unicode, Inc. All rights reserved.
+
