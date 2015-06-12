@@ -1,4 +1,5 @@
-# PronunciationTransliterator
-A chrome extension that can transilerate between languages.
-Currently only supports transliterating from Bangla to English. 
+# Anglify!
+A chrome extension that can transilerate languages to the latin script.
+
+Currently only supports transliterating from Bangla.
 
