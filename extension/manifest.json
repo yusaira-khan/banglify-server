@@ -1,9 +1,25 @@
 {
-  "name": "Anglify!",
+  "name": "Banglify!",
   "version": "0.0",
-  "manifest_version":2,
+  "manifest_version": 2,
   "description": "Transliterates to Roman script for easy pronunciation",
   "browser_action": {
-    "default_icon": "icon.png"
-  }
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "http://localhost/",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches":[ "<all_urls>"],
+      "js": [
+        "selection.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
 }
