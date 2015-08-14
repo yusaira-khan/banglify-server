@@ -5,25 +5,33 @@ var fs = require('fs');
 var banglaConverter;
 var server = http.createServer(function (req, response) {
 
+//TODO: use a framework, for lulz
+  var link = req.url;
+  var file = '';
   response.writeHead(200, {
     'Content-Type': 'text/html;charset=utf-8'
   });
-  var link = req.url;
-  var file = '';
+  if (req.method=='POST' && link=='/api/'){
+    banglaConverter.convertStream(req,response);
+    req.setEncoding('utf8');
+
+    return;
+  }
+
   if (link == '/') {
     //file = '/index.html';
     writeDefault(response);
-  } else if (link == 'all/') {
+  } else if (link == '/all/') {
     writeAll(response);
   } else {
     file = link;
     fs.readFile(__dirname + htdocs + file,
-      function (err, data) {
+      function (err, fileContents) {
         if (err) {
           console.error(err);
           response.end('Error loading index.html');
         }
-        else       response.end(data);
+        else       response.end(fileContents);
       });
   }
 });

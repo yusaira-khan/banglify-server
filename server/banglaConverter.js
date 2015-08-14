@@ -1,6 +1,8 @@
 /**
  * Created by ykhan14 on 25/06/15.
  */
+  var through = require('through2');
+//var split = require("split");
 var letters,
   zeroWidthJoiner = String.fromCharCode(8205),
   defaultVowel = 'অ',
@@ -9,10 +11,31 @@ var letters,
 module.exports = function (lettersToUse) {
   letters =lettersToUse;
   return {
-    convertString: convert
+    convertString: convert,
+    convertStream: toStream
   }
 };
+//TODO: put access to db in this folder
+//TODO: remove database, it's annoying
+//TODO: handle different pronunciation of dontoshho
+//TODO: handle different cases of jo phola
+//TODO: test how it works without split
+//TODO: use split to split at each space character to cry real tears if it doesn't work
+//TODO: test somehow (probably unittests and selenium
+function streamWriter(buffer,encoding,getNextChunk){
+  console.log("----------------------");
+  buffer=buffer.toString();
+  console.log(buffer);
+  a=convert(buffer);
+  console.log(a,"\n======================\n");
+  this.push(a);
+  getNextChunk();
+}
 
+var streamChanger = through(streamWriter);
+function toStream(sourceStream,sinkStream){
+  sourceStream.pipe(streamChanger).pipe(sinkStream);
+}
 
 function convert(string) {
   word = string.split('');
@@ -26,11 +49,12 @@ function convert(string) {
         convertedLetter = '';
       }
     } else if (convertedLetter == hoshonto) {
+
       //TODO: handle hoshonto with various functions
     } //TODO: handle dontoshsho: without combined words sh, with combined words s
 
     result.push(convertedLetter);
-    if (isConsonant(word[i]) && !isVowelSign(word[i + 1])) {
+    if (isConsonant(word[i]) && (!isVowelSign(word[i + 1])  || word[i+1]!= hoshonto)) {
       result.push(letters[defaultVowel]);
     }
   }
