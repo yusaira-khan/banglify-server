@@ -1,8 +1,7 @@
 var http = require('http');
-var conn = require('./databaseConnector');
 var htdocs = '/../htdocs';
 var fs = require('fs');
-var banglaConverter;
+var banglaConverter=require('./banglaConverter');
 var server = http.createServer(function (req, response) {
 
 //TODO: use a framework, for lulz
@@ -35,12 +34,8 @@ var server = http.createServer(function (req, response) {
       });
   }
 });
-function start() {
-  banglaConverter=require('./banglaConverter')(conn.letters);
-  server.listen(process.env.PORT);
-}
+server.listen(process.env.PORT);
 
-conn.connect(start);
 
 function writeAll(response) {
   response.write('<h1>All the letters!</h1><ul>');

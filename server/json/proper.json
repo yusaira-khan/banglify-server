@@ -1,0 +1,372 @@
+{
+ "অ": {
+  "base": "aw",
+  "desc": "letter a",
+  "special": null
+ },
+ "আ": {
+  "base": "aa",
+  "desc": "letter aa",
+  "special": null
+ },
+ "ই": {
+  "base": "i",
+  "desc": "letter i",
+  "special": null
+ },
+ "ঈ": {
+  "base": "ee",
+  "desc": "letter ii",
+  "special": null
+ },
+ "উ": {
+  "base": "u",
+  "desc": "letter u",
+  "special": null
+ },
+ "ঊ": {
+  "base": "oo",
+  "desc": "letter uu",
+  "special": null
+ },
+ "ঋ": {
+  "base": "ree",
+  "desc": "letter vocalic r",
+  "special": null
+ },
+ "এ": {
+  "base": "e",
+  "desc": "letter e",
+  "special": null
+ },
+ "ঐ": {
+  "base": "ei",
+  "desc": "letter ai",
+  "special": null
+ },
+ "ও": {
+  "base": "o",
+  "desc": "letter o",
+  "special": null
+ },
+ "ঔ": {
+  "base": "ou",
+  "desc": "letter au",
+  "special": null
+ },
+ "ক": {
+  "base": "k",
+  "desc": "letter ka",
+  "special": null
+ },
+ "খ": {
+  "base": "kh",
+  "desc": "letter kha",
+  "special": null
+ },
+ "গ": {
+  "base": "g",
+  "desc": "letter ga",
+  "special": null
+ },
+ "ঘ": {
+  "base": "gh",
+  "desc": "letter gha",
+  "special": null
+ },
+ "ঙ": {
+  "base": "ng",
+  "desc": "letter nga",
+  "special": null
+ },
+ "চ": {
+  "base": "ch",
+  "desc": "letter ca",
+  "special": null
+ },
+ "ছ": {
+  "base": "chh",
+  "desc": "letter cha",
+  "special": null
+ },
+ "জ": {
+  "base": "j",
+  "desc": "letter ja",
+  "special": null
+ },
+ "ঝ": {
+  "base": "jh",
+  "desc": "letter jha",
+  "special": null
+ },
+ "ঞ": {
+  "base": "ny",
+  "desc": "letter nya",
+  "special": null
+ },
+ "ট": {
+  "base": "t",
+  "desc": "letter tta",
+  "special": null
+ },
+ "ঠ": {
+  "base": "th",
+  "desc": "letter ttha",
+  "special": null
+ },
+ "ড": {
+  "base": "d",
+  "desc": "letter dda",
+  "special": null
+ },
+ "ঢ": {
+  "base": "dh",
+  "desc": "letter ddha",
+  "special": null
+ },
+ "ণ": {
+  "base": "n",
+  "desc": "letter nna",
+  "special": null
+ },
+ "ত": {
+  "base": "t",
+  "desc": "letter ta",
+  "special": null
+ },
+ "থ": {
+  "base": "th",
+  "desc": "letter tha",
+  "special": null
+ },
+ "দ": {
+  "base": "d",
+  "desc": "letter da",
+  "special": null
+ },
+ "ধ": {
+  "base": "dh",
+  "desc": "letter dha",
+  "special": null
+ },
+ "ন": {
+  "base": "n",
+  "desc": "letter na",
+  "special": null
+ },
+ "প": {
+  "base": "p",
+  "desc": "letter pa",
+  "special": null
+ },
+ "ফ": {
+  "base": "f",
+  "desc": "letter pha",
+  "special": null
+ },
+ "ব": {
+  "base": "b",
+  "desc": "letter ba",
+  "special": null
+ },
+ "ভ": {
+  "base": "bh",
+  "desc": "letter bha",
+  "special": null
+ },
+ "ম": {
+  "base": "m",
+  "desc": "letter ma",
+  "special": null
+ },
+ "য": {
+  "base": "j",
+  "desc": "letter ya",
+  "special": null
+ },
+ "র": {
+  "base": "r",
+  "desc": "letter ra",
+  "special": null
+ },
+ "ল": {
+  "base": "l",
+  "desc": "letter la",
+  "special": null
+ },
+ "শ": {
+  "base": "sh",
+  "desc": "letter sha",
+  "special": null
+ },
+ "ষ": {
+  "base": "sh",
+  "desc": "letter ssa",
+  "special": null
+ },
+ "স": {
+  "base": "s",
+  "desc": "letter sa",
+  "special": null
+ },
+ "হ": {
+  "base": "h",
+  "desc": "letter ha",
+  "special": null
+ },
+ "া": {
+  "base": "a",
+  "desc": "vowel sign aa",
+  "special": null
+ },
+ "ি": {
+  "base": "i",
+  "desc": "vowel sign i",
+  "special": null
+ },
+ "ী": {
+  "base": "ee",
+  "desc": "vowel sign ii",
+  "special": null
+ },
+ "ু": {
+  "base": "u",
+  "desc": "vowel sign u",
+  "special": null
+ },
+ "ূ": {
+  "base": "oo",
+  "desc": "vowel sign uu",
+  "special": null
+ },
+ "ৃ": {
+  "base": "ree",
+  "desc": "vowel sign vocalic r",
+  "special": null
+ },
+ "ে": {
+  "base": "e",
+  "desc": "vowel sign e",
+  "special": null
+ },
+ "ৈ": {
+  "base": "ei",
+  "desc": "vowel sign ai",
+  "special": null
+ },
+ "ো": {
+  "base": "o",
+  "desc": "vowel sign o",
+  "special": null
+ },
+ "ৌ": {
+  "base": "ou",
+  "desc": "vowel sign au",
+  "special": null
+ },
+ "্": {
+  "base": "-",
+  "desc": "sign virama",
+  "special": null
+ },
+ "ৎ": {
+  "base": "t",
+  "desc": "na=bengal",
+  "special": null
+ },
+ "ৗ": {
+  "base": "ou",
+  "desc": "au length mark",
+  "special": null
+ },
+ "ড়": {
+  "base": "r",
+  "desc": "letter rra",
+  "special": null
+ },
+ "ঢ়": {
+  "base": "rh",
+  "desc": "letter rha",
+  "special": null
+ },
+ "য়": {
+  "base": "y",
+  "desc": "letter yya",
+  "special": null
+ },
+ "০": {
+  "base": "0",
+  "desc": "digit zero",
+  "special": null
+ },
+ "১": {
+  "base": "1",
+  "desc": "digit one",
+  "special": null
+ },
+ "২": {
+  "base": "2",
+  "desc": "digit two",
+  "special": null
+ },
+ "৩": {
+  "base": "3",
+  "desc": "digit three",
+  "special": null
+ },
+ "৪": {
+  "base": "4",
+  "desc": "digit four",
+  "special": null
+ },
+ "৫": {
+  "base": "5",
+  "desc": "digit five",
+  "special": null
+ },
+ "৬": {
+  "base": "6",
+  "desc": "digit six",
+  "special": null
+ },
+ "৭": {
+  "base": "7",
+  "desc": "digit seven",
+  "special": null
+ },
+ "৮": {
+  "base": "8",
+  "desc": "digit eight",
+  "special": null
+ },
+ "৯": {
+  "base": "9",
+  "desc": "digit nine",
+  "special": null
+ },
+ "৳": {
+  "base": "taka",
+  "desc": "rupee sign",
+  "special": null
+ },
+ "ঁ": {
+  "base": "n",
+  "desc": "sign candrabindu",
+  "special": null
+ },
+ "ং": {
+  "base": "ng",
+  "desc": "sign anusvara",
+  "special": null
+ },
+ "ঃ": {
+  "base": "h",
+  "desc": "sign visarga",
+  "special": null
+ },
+ "।": {
+  "base": ".",
+  "desc": "danda",
+  "special": null
+ }
+}
