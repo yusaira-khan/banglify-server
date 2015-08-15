@@ -14,7 +14,6 @@ module.exports = {
   convertStream: toStream
 };
 
-//TODO: put access to db in this folder
 //TODO: handle different pronunciation of dontoshho
 //TODO: handle different cases of jo phola
 //TODO: test how it works without split
