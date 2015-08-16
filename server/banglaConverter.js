@@ -11,7 +11,7 @@ var letters = JSON.parse(fs.readFileSync('./json/bangla.json')),
 
 module.exports = {
   convertString: convert,
-  convertStream: toStream
+  getNewStreamConverter: transliterateStream
 };
 
 //TODO: handle different pronunciation of dontoshho
@@ -19,20 +19,15 @@ module.exports = {
 //TODO: test how it works without split
 //TODO: use split to split at each space character to cry real tears if it doesn't work
 //TODO: test somehow (probably unittests and selenium
-//TODO: use functions from 'special' field in JSON instead of if/else
+//TODO: use functions (passing continutations) from 'special' field in JSON instead of if/else
 function streamWriter(buffer, encoding, getNextChunk) {
-  console.log("----------------------");
-  buffer = buffer.toString();
-  console.log(buffer);
-  a = convert(buffer);
-  console.log(a, "\n======================\n");
-  this.push(a);
+  this.push(convert(buffer.toString()));
   getNextChunk();
 }
 
-var streamChanger = through(streamWriter);
-function toStream(sourceStream, sinkStream) {
-  sourceStream.pipe(streamChanger).pipe(sinkStream);
+
+function transliterateStream(sourceStream, sinkStream) {
+  return through(streamWriter);
 }
 
 function convert(string) {

@@ -2,18 +2,16 @@ var http = require('http');
 var htdocs = '/../htdocs';
 var fs = require('fs');
 var banglaConverter=require('./banglaConverter');
-var server = http.createServer(function (req, response) {
+var server = http.createServer(function (request, response) {
 
 //TODO: use a framework, for lulz
-  var link = req.url;
+  var link = request.url;
   var file = '';
   response.writeHead(200, {
-    'Content-Type': 'text/html;charset=utf-8'
+    'Content-Type': 'text/html;charset=utf-8' //TODO: check if this is right for post as well
   });
-  if (req.method=='POST' && link=='/api/'){
-    banglaConverter.convertStream(req,response);
-    req.setEncoding('utf8');
-
+  if (request.method=='POST' && link=='/api/'){
+    request.pipe(banglaConverter.getNewStreamConverter()).pipe(response);
     return;
   }
 
