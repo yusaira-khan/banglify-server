@@ -274,6 +274,11 @@
   "desc": "na=bengal",
   "special": null
  },
+  "়": {
+  "base": "ou",
+  "desc": "nokta",
+  "special": null
+ },
  "ৗ": {
   "base": "ou",
   "desc": "au length mark",

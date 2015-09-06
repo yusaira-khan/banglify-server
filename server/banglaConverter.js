@@ -4,8 +4,9 @@
 var fs = require('fs');
 var through = require('through2');
 //var split = require("split");
-var letters = JSON.parse(fs.readFileSync('./json/bangla.json')),
+var letters = JSON.parse(fs.readFileSync(__dirname+'/json/bangla.json')),
   zeroWidthJoiner = String.fromCharCode(8205),
+  nokta= '\u09BC',
   defaultVowel = 'অ',
   hoshonto = String.fromCharCode(2509);
 
@@ -20,7 +21,7 @@ module.exports = {
 //TODO: use split to split at each space character to cry real tears if it doesn't work
 //TODO: test somehow (probably unittests and selenium
 //TODO: use functions (passing continutations) from 'special' field in JSON instead of if/else
-function streamWriter(buffer, encoding, getNextChunk) {
+function streamWriter(buffer, _, getNextChunk) {
   this.push(convert(buffer.toString()));
   getNextChunk();
 }
@@ -31,12 +32,13 @@ function transliterateStream(sourceStream, sinkStream) {
 }
 
 function convert(string) {
+
   word = string.split('');
   result = [];
   len = string.length;
   for (var i = 0; i < len; i++) {
     var currentLetter = word[i];
-    if (currentLetter == zeroWidthJoiner) {
+    if (currentLetter == zeroWidthJoiner||currentLetter==nokta) {
       continue;
     }
     var convertedLetter = letters[currentLetter];
@@ -45,7 +47,7 @@ function convert(string) {
       continue;
 
     } else if (currentLetter == hoshonto) {
-
+      continue;
       //TODO: handle hoshonto with various functions
     }
     else {
@@ -53,14 +55,20 @@ function convert(string) {
       convertedLetter = convertedLetter.base;
     }
     result.push(convertedLetter);
-    if (isConsonant(word[i]) && (!isVowelSign(word[i + 1]) && word[i + 1] != hoshonto)) {
+    if (isConsonant(word[i]) && canAddDefault(word[i+1])) {
       result.push(letters[defaultVowel].base);
     }
   }
   return result.join('');
 }
 
+function canAddDefault(nextChar){
+  //return (!isVowelSign(nextChar) && nextChar != hoshonto && nextChar != ' ');
+  return isConsonant(nextChar);
+}
+
 function isConsonant(char) {
+  if (typeof char === 'undefined') return false;
   if (isNaN(char)) {
     char = char.charCodeAt(0);
   }
