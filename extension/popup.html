@@ -1,15 +1,17 @@
 <html>
 <head>
     <script src="postAndConvert.js"></script>
-    <!--<script src="paste.js"></script>-->
+
     <style>
-        #text {
+        #result {
+            white-space: break-word;
+            font-size: 0.5cm;
+        }
+        body{
             width: 400px;
             height: 400px;
             max-height: 400px;
-        / / overflow : scroll;
-            white-space: break-word;
-            font-size: 0.5cm;
+            margin: 0px;
         }
 
         #spinner {
@@ -17,19 +19,34 @@
             height: 100%;
             position: absolute;
             z-index: 2000000000;
-            //display: none;
-            background-color: red;
-            margin-top: -8px;
-            margin-left: -8px;
+            background-color: white;
+            top:0;
+            left:0;
+            /*margin-top: -8px;
+            margin-left: -8px;*/
         }
         #spinner img{
            transform: translate(50%,50%);
         }
+        #error{
+            display: none;
+            color:red;
+        }
+        #original{
+            color:#626262;
+            border-bottom: dashed #626262 2px;
+        }
     </style>
 </head>
 <body>
-<div id="spinner"><img src="spinner_animation02.gif"></div>
-<div id="text">Select text and click on popup to see</div>
+<button id="original-text-button" >Show original text</button>
+<div id="spinner"></div>
+    <script src="spin.min.js"></script>
+    <script src="spinnerDetails.js"></script>
+
+<div id="error"><h1>An error occured while trying convert. Please try again later</h1></div>
+<div id="original"></div>
+<div id="result">Select text and click on popup to see</div>
 
 
 </body>
