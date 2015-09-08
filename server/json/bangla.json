@@ -2,376 +2,387 @@
  "অ": {
   "base": "o",
   "desc": "letter a",
-  "special": null
+  "functionUsed": "getBase"
  },
  "আ": {
   "base": "aa",
   "desc": "letter aa",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ই": {
   "base": "i",
   "desc": "letter i",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ঈ": {
   "base": "ee",
   "desc": "letter ii",
-  "special": null
+  "functionUsed": "getBase"
  },
  "উ": {
   "base": "u",
   "desc": "letter u",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ঊ": {
   "base": "oo",
   "desc": "letter uu",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ঋ": {
   "base": "ree",
   "desc": "letter vocalic r",
-  "special": null
+  "functionUsed": "getBase"
  },
  "এ": {
   "base": "e",
   "desc": "letter e",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ঐ": {
   "base": "ei",
   "desc": "letter ai",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ও": {
   "base": "o",
   "desc": "letter o",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ঔ": {
   "base": "ou",
   "desc": "letter au",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ক": {
   "base": "k",
   "desc": "letter ka",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "খ": {
   "base": "kh",
   "desc": "letter kha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "গ": {
   "base": "g",
   "desc": "letter ga",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ঘ": {
   "base": "gh",
   "desc": "letter gha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ঙ": {
   "base": "ng",
   "desc": "letter nga",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "চ": {
   "base": "ch",
   "desc": "letter ca",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ছ": {
   "base": "chh",
   "desc": "letter cha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "জ": {
   "base": "j",
   "desc": "letter ja",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ঝ": {
   "base": "jh",
   "desc": "letter jha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ঞ": {
   "base": "ny",
   "desc": "letter nya",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ট": {
   "base": "t",
   "desc": "letter tta",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ঠ": {
   "base": "th",
   "desc": "letter ttha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ড": {
   "base": "d",
   "desc": "letter dda",
-  "special": null
+  "functionUsed": "addConsonant",
+  "noktaChange":"ড়"
  },
  "ঢ": {
   "base": "dh",
   "desc": "letter ddha",
-  "special": null
+  "functionUsed": "addConsonant",
+  "noktaChange":"ঢ়"
  },
  "ণ": {
   "base": "n",
   "desc": "letter nna",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ত": {
   "base": "t",
   "desc": "letter ta",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "থ": {
   "base": "th",
   "desc": "letter tha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "দ": {
   "base": "d",
   "desc": "letter da",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ধ": {
   "base": "dh",
   "desc": "letter dha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ন": {
   "base": "n",
   "desc": "letter na",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "প": {
   "base": "p",
   "desc": "letter pa",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ফ": {
   "base": "f",
   "desc": "letter pha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ব": {
   "base": "b",
   "desc": "letter ba",
-  "special": null
+  "functionUsed": "addConsonant",
+  "noktaChange":"র"
  },
  "ভ": {
   "base": "bh",
   "desc": "letter bha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ম": {
   "base": "m",
   "desc": "letter ma",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "য": {
   "base": "j",
   "desc": "letter ya",
-  "special": null
+  "functionUsed": "checkAndHandleJaPhala",
+  "noktaChange":"য়"
  },
  "র": {
   "base": "r",
   "desc": "letter ra",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ল": {
   "base": "l",
   "desc": "letter la",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "শ": {
   "base": "sh",
   "desc": "letter sha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ষ": {
   "base": "sh",
   "desc": "letter ssa",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "স": {
   "base": "sh",
   "desc": "letter sa",
-  "special": null
+  "functionUsed": "handleDontoSho"
  },
  "হ": {
   "base": "h",
   "desc": "letter ha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "া": {
   "base": "a",
   "desc": "vowel sign aa",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ি": {
   "base": "i",
   "desc": "vowel sign i",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ী": {
   "base": "ee",
   "desc": "vowel sign ii",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ু": {
   "base": "u",
   "desc": "vowel sign u",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ূ": {
   "base": "oo",
   "desc": "vowel sign uu",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ৃ": {
   "base": "ree",
   "desc": "vowel sign vocalic r",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ে": {
   "base": "e",
   "desc": "vowel sign e",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ৈ": {
-  "base": "ei",
+  "base": "oi",
   "desc": "vowel sign ai",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ো": {
   "base": "o",
   "desc": "vowel sign o",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ৌ": {
   "base": "ou",
   "desc": "vowel sign au",
-  "special": null
+  "functionUsed": "getBase"
  },
  "্": {
   "base": "",
-  "desc": "sign virama",
-  "special": null
+  "desc": "sign virama (hoshonto)",
+  "functionUsed": "checkAndHandleJaPhala"
  },
  "ৎ": {
   "base": "t",
-  "desc": "na=bengal",
-  "special": null
+  "desc": "sign khondo to",
+  "functionUsed": "getBase"
  },
   "়": {
-  "base": "ou",
+  "base": "",
   "desc": "nokta",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ৗ": {
   "base": "ou",
   "desc": "au length mark",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ড়": {
   "base": "r",
   "desc": "letter rra",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "ঢ়": {
   "base": "rh",
   "desc": "letter rha",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "য়": {
   "base": "y",
   "desc": "letter yya",
-  "special": null
+  "functionUsed": "addConsonant"
  },
  "০": {
   "base": "0",
   "desc": "digit zero",
-  "special": null
+  "functionUsed": "getBase"
  },
  "১": {
   "base": "1",
   "desc": "digit one",
-  "special": null
+  "functionUsed": "getBase"
  },
  "২": {
   "base": "2",
   "desc": "digit two",
-  "special": null
+  "functionUsed": "getBase"
  },
  "৩": {
   "base": "3",
   "desc": "digit three",
-  "special": null
+  "functionUsed": "getBase"
  },
  "৪": {
   "base": "4",
   "desc": "digit four",
-  "special": null
+  "functionUsed": "getBase"
  },
  "৫": {
   "base": "5",
   "desc": "digit five",
-  "special": null
+  "functionUsed": "getBase"
  },
  "৬": {
   "base": "6",
   "desc": "digit six",
-  "special": null
+  "functionUsed": "getBase"
  },
  "৭": {
   "base": "7",
   "desc": "digit seven",
-  "special": null
+  "functionUsed": "getBase"
  },
  "৮": {
   "base": "8",
   "desc": "digit eight",
-  "special": null
+  "functionUsed": "getBase"
  },
  "৯": {
   "base": "9",
   "desc": "digit nine",
-  "special": null
+  "functionUsed": "getBase"
  },
  "৳": {
   "base": "taka",
   "desc": "rupee sign",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ঁ": {
   "base": "n",
   "desc": "sign candrabindu",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ং": {
   "base": "ng",
   "desc": "sign anusvara",
-  "special": null
+  "functionUsed": "getBase"
  },
  "ঃ": {
   "base": "h",
   "desc": "sign visarga",
-  "special": null
+  "functionUsed": "getBase"
  },
  "।": {
   "base": ".",
   "desc": "danda",
-  "special": null
+  "functionUsed": "getBase"
+ },
+
+ "\u200D": {
+  "base": "",
+  "desc": "Zero Width Joiner",
+  "functionUsed": "getBase"
  }
+
 }

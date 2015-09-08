@@ -1,7 +1,7 @@
 var http = require('http');
 var htdocs = '/../htdocs';
 var fs = require('fs');
-var banglaConverter=require('./banglaConverter');
+var banglaStream=require('./streamHandler');
 var server = http.createServer(function (request, response) {
 
 //TODO: use a framework, for lulz
@@ -13,12 +13,14 @@ var server = http.createServer(function (request, response) {
   });
   if (request.method=='POST' && link=='/api/'){
 
-    request.pipe(banglaConverter.getNewStreamConverter()).pipe(response);
+    request.pipe(banglaStream.getNewStreamConverter()).pipe(response);
     return;
   }
 
   if (link == '/') {
     //file = '/index.html';
+    //Get favico
+    //Proper landing page
     writeDefault(response);
   } else if (link == '/all/') {
     writeAll(response);
@@ -38,7 +40,7 @@ server.listen(process.env.PORT);
 
 
 function writeAll(response) {
-  response.write('<h1>All the letters!</h1><ul>');
+  response.write('<h1>All the defaultLetters!</h1><ul>');
   for (var i in conn.letters) {
     response.write('<li>' + i + ' : ' + conn.letters[i] + '</li>')
 
@@ -49,7 +51,7 @@ function writeAll(response) {
 function writeDefault(resp) {
   var test = '\u0995\u09A5\u09BE';
   test = 'বড়  আশা করে এসেছি গো কাছে দেকে নাও।';
-  var result = banglaConverter.convertString(test);
+  var result = banglaStream.convertString(test);
   resp.write('<div><h1>Test string:</h1><br/>');
   resp.write('<h2>' + test + '</h2></div>');
   resp.write('<div><h1>Converted:</h1><br/>');

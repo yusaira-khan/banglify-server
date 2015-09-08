@@ -1,86 +1,123 @@
-/**
- * Created by ykhan14 on 25/06/15.
- */
 var fs = require('fs');
-var through = require('through2');
-//var split = require("split");
-var letters = JSON.parse(fs.readFileSync(__dirname+'/json/bangla.json')),
-  zeroWidthJoiner = String.fromCharCode(8205),
-  nokta= '\u09BC',
-  defaultVowel = 'অ',
-  hoshonto = String.fromCharCode(2509);
+var defaultLetters = JSON.parse(fs.readFileSync(__dirname + '/json/bangla.json')),
+  defaultVowel='\u0985',
+  nokta = '\u09BC',
+  hoshonto = '\u09CD';
 
-module.exports = {
-  convertString: convert,
-  getNewStreamConverter: transliterateStream
-};
+module.exports = {ConvertingEnvironment: ConvertingEnvironment};
 
-//TODO: handle different pronunciation of dontoshho
-//TODO: handle different cases of jo phola
-//TODO: test how it works without split
-//TODO: use split to split at each space character to cry real tears if it doesn't work
-//TODO: test somehow (probably unittests and selenium
-//TODO: use functions (passing continutations) from 'special' field in JSON instead of if/else
-function streamWriter(buffer, _, getNextChunk) {
-  this.push(convert(buffer.toString()));
-  getNextChunk();
-}
-
-
-function transliterateStream(sourceStream, sinkStream) {
-  return through(streamWriter);
-}
-
-function convert(string) {
-
-  word = string.split('');
-  result = [];
-  len = string.length;
-  for (var i = 0; i < len; i++) {
-    var currentLetter = word[i];
-    if (currentLetter == zeroWidthJoiner||currentLetter==nokta) {
-      continue;
-    }
-    var convertedLetter = letters[currentLetter];
-    if (convertedLetter == undefined) {
-      result.push(currentLetter);
-      continue;
-
-    } else if (currentLetter == hoshonto) {
-      continue;
-      //TODO: handle hoshonto with various functions
-    }
-    else {
-      //TODO: handle dontoshsho: without combined words sh, with combined words s (involves hoshonto)
-      convertedLetter = convertedLetter.base;
-    }
-    result.push(convertedLetter);
-    if (isConsonant(word[i]) && canAddDefault(word[i+1])) {
-      result.push(letters[defaultVowel].base);
-    }
+function ConvertingEnvironment(givenLetters) {
+  if (givenLetters == undefined) {
+    this.letters = defaultLetters;
+  } else {
+    this.letters = givenLetters;
   }
-  return result.join('');
+  this.result = [];
+  this.convert = convert;
+  this.getBase = getBase;
+  this.addConsonant = addConsonant;
+  this.handleDontoSho = handleDontoSho;
+  this.checkAndHandleJaPhala = checkAndHandleJaPhala;
+  this.addUnconveterted = addUnconveterted;
+  this.addToResult = addToResult;
 }
 
-function canAddDefault(nextChar){
+function convert(currentLetter, nextLetter) {
+  if (!isBangla(currentLetter)) {
+    this.addUnconveterted(currentLetter);
+    return;
+  }
+  functionName = this.letters[currentLetter].functionUsed;
+  this[functionName](currentLetter, nextLetter);
+}
+
+function getBase(currentLetter) {
+  var convertedLetter = this.letters[currentLetter];
+  this.addToResult(convertedLetter.base);
+}
+
+function addToResult(letter) {
+  this.result.push(letter);
+}
+
+
+function addUnconveterted(currentLetter) {
+  this.addToResult(currentLetter);
+}
+
+
+function addConsonant(current, next) {
+  this.getBase(current);
+  if (isConsonant(current) && canAddDefault(current, next)) {
+    this.getBase(defaultVowel);
+  }
+}
+
+function handleDontoSho(sho, nextLetter) {
+  if (nextLetter == hoshonto || nextLetter == /*ree kar*/ '\u09C3') {
+    this.addToResult('s');
+  }
+  else {
+        this.addConsonant(sho, nextLetter);
+  }
+}
+
+function checkAndHandleJaPhala(currentLetter, nextLetter) {
+  if (currentLetter == hoshonto && nextLetter == /*ontostio jo*/'\u09AF') {
+    this.changeJaToYa = true;
+  } else if (this.changeJaToYa && currentLetter == '\u09AF') {
+    this.addConsonant('\u09DF', nextLetter);
+    this.changeJaToYa = false;
+  }
+}
+
+function checkAndHandleNoktaChange(currentLetter, nextLetter) {
+  if (nextLetter == undefined) {
+    this.addConsonant(currentLetter, nextLetter);
+    return;
+  }
+  if (nextLetter == nokta) {
+    //addConsonant(this.letters[]);
+  }
+}
+
+function canAddDefault(currentChar, nextChar) {
   //return (!isVowelSign(nextChar) && nextChar != hoshonto && nextChar != ' ');
-  return isConsonant(nextChar);
-}
+  if (currentChar=='\u09aa'){
 
+  }
+  return (isConsonant(nextChar)
+    || (isBoundaryExceptionConsonant(currentChar,nextChar)))
+    && (!isWeirdR(currentChar,nextChar));
+}
 function isConsonant(char) {
   if (typeof char === 'undefined') return false;
-  if (isNaN(char)) {
-    char = char.charCodeAt(0);
-  }
-  return (char >= 2453 && char <= 2489 ) || (char >= 2524 && char <= 2527);
+  return (char >= '\u0995' && char <= '\u09B9' ) //ko  - ho
+    || (char >= '\u09DC' && char <= '\u09DF') //doe shhuno ro - onntostio o
+    || (char >= '\u0981' && char <= '\u0983');// unnashar- chandrabindu
+}
+function isVowelLetter(char) {
+  if (typeof char === 'undefined') return false;
+  return (char >= '\u0985' && char <= '\u0994');
 }
 
 function isVowelSign(char) {
   if (typeof char === 'undefined') return false;
-  if (isNaN(char)) {
-    char = char.charCodeAt(0);
-  }
-  return (char >= 2494 && char <= 2508);
+  return (char >= '\u09BE' && char <= '\u09CC');
 }
 
+function isBoundaryExceptionConsonant(char, next) {
+  var isExceptionLetters = (char >= '\u09DC' && char <= '\u09DF') || char=='\u09A4';
+  if (isExceptionLetters) {//check if at end of word
+    return ((next == undefined)) || !(isVowelLetter(next) || isVowelSign(next) || isConsonant(next));
+  }
+  return false;
+}
+//TODO:handle boe shunno ro being weird (korte, shorkar, robi)
+function isWeirdR(current,next){
 
+  return current=='\u09B0' && ( next == '\u09A4' || next=='\u09AC' || next == '\u0995')
+}
+function isBangla(char) {
+  return (char > '\u0980' && char <= '\u09EF') || char == '\u0964';
+}

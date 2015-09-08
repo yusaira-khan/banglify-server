@@ -1,14 +1,4 @@
-/**
- * Created by yusaira-khan on 13/08/15.
- */
 var url = "http://localhost:8080/api/";
-function handleError() {
-  console.error('An error occured');
-  spinner.stop();
-  target.style.display='none';
-  document.getElementById('error').style.display = 'block';
-  document.getElementById('original-text-button').style.display='none';
-}
 
 var x = new XMLHttpRequest();
 x.open('POST', url);
@@ -24,11 +14,21 @@ x.onload = function () {
   document.getElementById('result').innerHTML += "<br/><div style='color:red;'>" + response + '<div>';
 
 };
+
+function handleError() {
+  console.error('An error occured');
+  spinner.stop();
+  target.style.display='none';
+  document.getElementById('error').style.display = 'block';
+  document.getElementById('original-text-button').style.display='none';
+}
+
 x.onerror = handleError;
-//TODO:fix css
+
 //TODO:get an icon with bangla
 //TODO:organise the extension better
-//TODO: standalone chrome app without server with selectable pronunciation?
+//  //TODO: add selectable pronunciation in chrome extension options
+//TODO: highlighting word hovered over in both original and span text
 
 function getSelectedText(callback) {
   chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {

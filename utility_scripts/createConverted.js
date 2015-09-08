@@ -1,6 +1,6 @@
 var fs =require('fs');
 
-var converter = require('../server/banglaConverter');
+var converter = require('../server/streamHandler');
 var contents = fs.readFileSync('../htdocs/splitTest.html',{
     encoding:'utf8'
 });
