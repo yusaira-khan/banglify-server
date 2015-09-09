@@ -14,7 +14,7 @@ function ConvertingEnvironment(givenLetters) {
   }
   this.result = [];
   this.convert = convert;
-  this.getBase = getBase;
+  this.addBaseOfLetter = addBaseOfLetter;
   this.addConsonant = addConsonant;
   this.handleDontoSho = handleDontoSho;
   this.checkAndHandleJaPhala = checkAndHandleJaPhala;
@@ -31,7 +31,7 @@ function convert(currentLetter, nextLetter) {
   this[functionName](currentLetter, nextLetter);
 }
 
-function getBase(currentLetter) {
+function addBaseOfLetter(currentLetter) {
   var convertedLetter = this.letters[currentLetter];
   this.addToResult(convertedLetter.base);
 }
@@ -47,9 +47,9 @@ function addUnconveterted(currentLetter) {
 
 
 function addConsonant(current, next) {
-  this.getBase(current);
+  this.addBaseOfLetter(current);
   if (isConsonant(current) && canAddDefault(current, next)) {
-    this.getBase(defaultVowel);
+    this.addBaseOfLetter(defaultVowel);
   }
 }
 

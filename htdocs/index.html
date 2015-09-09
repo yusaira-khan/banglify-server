@@ -1,22 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>
-        Banglify!
-    </title>
+  <meta charset="UTF-8">
+  <title>
+    Banglify!
+  </title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext' rel='stylesheet'
+        type='text/css'>
+  <link href='http://localhost:8080/bangla_font' rel='stylesheet'
+        type='text/css'>
+  <style>
 
+    body {
+
+      margin: 0;
+      font-family: Source Sans Pro, Akaash, serif;
+    }
+
+    #original-text-button {
+      margin: 4px auto;
+      background-color: #41ba3e;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom-color: #41b93e;
+      border-bottom-width: 2px;
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+
+    }
+
+    .text {
+      white-space: break-word;
+      font-size: 0.5cm;
+      margin: 8px;
+      width: 400px;
+      height: 400px;
+      max-height: 400px;
+    }
+
+    #spinner {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2000000000;
+      background-color: white;
+      top: 0;
+      left: 0;
+      /*margin-top: -8px;
+      margin-left: -8px;*/
+    }
+
+    #spinner img {
+      transform: translate(50%, 50%);
+    }
+
+    #error {
+      display: none;
+      color: red;
+    }
+
+    #original {
+      color: #424242;
+      border-bottom: dashed #626262 2px;
+    }
+
+    #original:first-child:before {
+      content: 'Original Text:<br/>';
+    }
+
+    .hover {
+      background-color: #ade7ab;
+    }
+
+  </style>
 </head>
 <body>
-<h1>Enter Bangla text that will be converted to english!</h1>
+<h1>Welcome to Banglify!</h1>
+
+<h2>Turn text written in Bangla script into it's romanized version in English Script</h2>
+
+<h2>Use the <a>Chrome Extension</a></h2>
+
+
 <script>
-    /**
- * TODO: store original word in place
- * TODO: fetch ipa proncition with ajax
- * TODO: while hovering on transliterated word, show original word and ipa pronciation
- *
- *
- */
+  /**
+   * TODO: store original word in place
+   * TODO: fetch ipa proncition with ajax
+   * TODO: while hovering on transliterated word, show original word and ipa pronciation
+   * TODO: make usage gif
+   *TODO: add favico
+   * TODO: use jquery
+   *
+   */
 </script>
 </body>
 </html>

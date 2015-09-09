@@ -1,0 +1,7 @@
+@font-face {
+      font-family: 'Akaash';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Akaash'), local('Akaash-Regular'), url(http://localhost:8080/AkaashNormal.ttf) format('ttf');
+      unicode-range: U+0980-09EF, U+0964, U+200D;
+    }

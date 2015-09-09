@@ -18,15 +18,19 @@ var server = http.createServer(function (request, response) {
   }
 
   if (link == '/') {
-    //file = '/index.html';
+    file = '/index.html';
+    fetchFile(file,response);
     //Get favico
     //Proper landing page
-    writeDefault(response);
-  } else if (link == '/all/') {
-    writeAll(response);
+    //writeDefault(response);
   } else {
     file = link;
-    fs.readFile(__dirname + htdocs + file,
+    fetchFile(file,response);
+  }
+});
+
+function fetchFile(fileName,response){
+  fs.readFile(__dirname + htdocs + fileName,
       function (err, fileContents) {
         if (err) {
           console.error(err);
@@ -34,8 +38,7 @@ var server = http.createServer(function (request, response) {
         }
         else       response.end(fileContents);
       });
-  }
-});
+}
 server.listen(process.env.PORT);
 
 

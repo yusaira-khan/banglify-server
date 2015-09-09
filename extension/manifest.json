@@ -1,11 +1,16 @@
 {
   "name": "Banglify!",
-  "version": "0.0",
+  "version": "0.1",
   "manifest_version": 2,
   "description": "Transliterates to Roman script for easy pronunciation",
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "icons/38x38.png",
     "default_popup": "popup.html"
+  },
+  "icons":{
+    "16": "icons/16x16.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
   },
   "permissions": [
     "activeTab",

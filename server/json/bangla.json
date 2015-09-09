@@ -2,57 +2,57 @@
  "অ": {
   "base": "o",
   "desc": "letter a",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "আ": {
   "base": "aa",
   "desc": "letter aa",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ই": {
   "base": "i",
   "desc": "letter i",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ঈ": {
   "base": "ee",
   "desc": "letter ii",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "উ": {
   "base": "u",
   "desc": "letter u",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ঊ": {
   "base": "oo",
   "desc": "letter uu",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ঋ": {
   "base": "ree",
   "desc": "letter vocalic r",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "এ": {
   "base": "e",
   "desc": "letter e",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ঐ": {
   "base": "ei",
   "desc": "letter ai",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ও": {
   "base": "o",
   "desc": "letter o",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ঔ": {
   "base": "ou",
   "desc": "letter au",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ক": {
   "base": "k",
@@ -221,52 +221,52 @@
  "া": {
   "base": "a",
   "desc": "vowel sign aa",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ি": {
   "base": "i",
   "desc": "vowel sign i",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ী": {
   "base": "ee",
   "desc": "vowel sign ii",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ু": {
   "base": "u",
   "desc": "vowel sign u",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ূ": {
   "base": "oo",
   "desc": "vowel sign uu",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ৃ": {
   "base": "ree",
   "desc": "vowel sign vocalic r",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ে": {
   "base": "e",
   "desc": "vowel sign e",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ৈ": {
   "base": "oi",
   "desc": "vowel sign ai",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ো": {
   "base": "o",
   "desc": "vowel sign o",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ৌ": {
   "base": "ou",
   "desc": "vowel sign au",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "্": {
   "base": "",
@@ -276,17 +276,17 @@
  "ৎ": {
   "base": "t",
   "desc": "sign khondo to",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
   "়": {
   "base": "",
   "desc": "nokta",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ৗ": {
   "base": "ou",
   "desc": "au length mark",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ড়": {
   "base": "r",
@@ -306,83 +306,83 @@
  "০": {
   "base": "0",
   "desc": "digit zero",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "১": {
   "base": "1",
   "desc": "digit one",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "২": {
   "base": "2",
   "desc": "digit two",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "৩": {
   "base": "3",
   "desc": "digit three",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "৪": {
   "base": "4",
   "desc": "digit four",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "৫": {
   "base": "5",
   "desc": "digit five",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "৬": {
   "base": "6",
   "desc": "digit six",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "৭": {
   "base": "7",
   "desc": "digit seven",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "৮": {
   "base": "8",
   "desc": "digit eight",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "৯": {
   "base": "9",
   "desc": "digit nine",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "৳": {
   "base": "taka",
   "desc": "rupee sign",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ঁ": {
   "base": "n",
   "desc": "sign candrabindu",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ং": {
   "base": "ng",
   "desc": "sign anusvara",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "ঃ": {
   "base": "h",
   "desc": "sign visarga",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
  "।": {
   "base": ".",
   "desc": "danda",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  },
 
  "\u200D": {
   "base": "",
   "desc": "Zero Width Joiner",
-  "functionUsed": "getBase"
+  "functionUsed": "addBaseOfLetter"
  }
 
 }
