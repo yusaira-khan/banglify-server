@@ -33,37 +33,26 @@ function addHighlighttableText(text, targetElementName) {
   for (var i = 0; i < words.length; i++) {
     var el = document.createElement('span');
     el.appendChild(document.createTextNode(words[i] + ' '));
+    el.dataset.index = i;
     el.className = 'word_' + i;
-    el.addEventListener("mouseover", highlightOnHover, el.className);
-    el.addEventListener("mouseout", removeHighlight);
+    el.addEventListener("mouseover", toggleHighlightOnHover);
+    el.addEventListener("mouseout", toggleHighlightOnHover);
     target.appendChild(el);
 
   }
 }
 
-function highlightOnHover() {
-  var el = document.getElementsByClassName(this.className);
+function toggleHighlightOnHover() {
+  var el = document.getElementsByClassName('word_'+this.dataset.index);
   for (var i = 0; i < el.length; i++) {
-    var currentClass = el[i].className;
-    if (currentClass.indexOf("hover") > -1){
-
-    }else{
-      el[i].className =  currentClass+ ' hover';
-    }
-  }
-}
-
-function removeHighlight() {
-  var el = document.getElementsByClassName('hover');
-  for (var i = 0; i < el.length; i++) {
-    el[i].className = el[i].className.replace(' hover', '');
+    var node=el[i];
+    node.classList.toggle('hover');
   }
 }
 
 function getSelectedText(callback) {
   chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
     chrome.tabs.sendMessage(tabs[0].id, {"message": "selected_text"}, function (selectedText) {
-      console.log(selectedText);
       callback(selectedText);
     });
   });
@@ -92,5 +81,4 @@ function displayOriginalText() {
 
 //TODO:get an icon with bangla
 //TODO:organise the extension better
-//  //TODO: add selectable pronunciation in chrome extension options
-//TODO: highlighting word hovered over in both original and span text
+//TODO: add selectable pronunciation in chrome extension options

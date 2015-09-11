@@ -1,17 +1,15 @@
 var http = require('http');
 var htdocs = '/../htdocs';
 var fs = require('fs');
-var banglaStream=require('./streamHandler');
+var banglaStream = require('./streamHandler');
 var server = http.createServer(function (request, response) {
 
 //TODO: use a framework, for lulz
   var link = request.url;
 
   var file = '';
-  response.writeHead(200, {
-    'Content-Type': 'text/html;charset=utf-8' //TODO: check if this is right for post as well
-  });
-  if (request.method=='POST' && link=='/api/'){
+
+  if (request.method == 'POST' && link == '/api/') {
 
     request.pipe(banglaStream.getNewStreamConverter()).pipe(response);
     return;
@@ -19,26 +17,46 @@ var server = http.createServer(function (request, response) {
 
   if (link == '/') {
     file = '/index.html';
-    fetchFile(file,response);
+    response.writeHead(200, {
+      'Content-Type': 'text/html;charset=utf-8' //TODO: check if this is right for post as well
+    });
+    fetchFile(file, response);
     //Get favico
     //Proper landing page
     //writeDefault(response);
   } else {
+
     file = link;
-    fetchFile(file,response);
+    var ext = writeExtension(file,response);
+    fetchFile(file, response);
   }
 });
 
-function fetchFile(fileName,response){
+function fetchFile(fileName, response) {
   fs.readFile(__dirname + htdocs + fileName,
-      function (err, fileContents) {
-        if (err) {
-          console.error(err);
-          response.end('Error loading index.html');
-        }
-        else       response.end(fileContents);
-      });
+    function (err, fileContents) {
+      if (err) {
+        console.error(err);
+        response.end('Error loading index.html');
+      }
+      else       response.end(fileContents);
+    });
 }
+
+function writeExtension(filName,response){
+var ext=  filName.split('.').pop();
+  var type='';
+  if (ext=='ttf' || ext=='woff2'){
+    type= 'application/x-font-'+ext
+  }else{
+    type = 'text/'+ext
+  }
+  response.writeHead(200, {
+    'Content-Type': +type //TODO: check if this is right for post as well
+  });
+
+}
+
 server.listen(process.env.PORT);
 
 
