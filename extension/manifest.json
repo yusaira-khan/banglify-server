@@ -1,8 +1,8 @@
 {
   "name": "Banglify!",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 2,
-  "description": "Transliterates to Roman script for easy pronunciation",
+  "description": "Transliterates Bangla to English script for easy pronunciation. Select Bangla text and Click on the extension icon.",
   "browser_action": {
     "default_icon": "icons/38x38.png",
     "default_popup": "popup.html"

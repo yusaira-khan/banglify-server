@@ -1,4 +1,4 @@
-var url = "http://localhost:8080/api/";
+var url = "https://banglify.herokuapp.com/api/";
 
 var x = new XMLHttpRequest();
 x.open('POST', url);
