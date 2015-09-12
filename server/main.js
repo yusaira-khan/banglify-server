@@ -27,19 +27,30 @@ var server = http.createServer(function (request, response) {
   } else {
 
     file = link;
-    var ext = writeExtension(file,response);
+
+   writeExtension(file,response);
     fetchFile(file, response);
   }
 });
+function isFileInNodeModules(file){
+  return file.split('/')[1]=='node_modules'
+}
 
 function fetchFile(fileName, response) {
-  fs.readFile(__dirname + htdocs + fileName,
+  console.log(response.getHeader('content-type'));
+  var file='';
+  if (isFileInNodeModules(fileName)){
+    file=__dirname + '/../'+fileName;
+  }else{
+    file = __dirname + htdocs + fileName;
+  }
+  fs.readFile(file,
     function (err, fileContents) {
       if (err) {
         console.error(err);
         response.end('Error loading index.html');
       }
-      else       response.end(fileContents);
+      else response.end(fileContents);
     });
 }
 
@@ -48,26 +59,20 @@ var ext=  filName.split('.').pop();
   var type='';
   if (ext=='ttf' || ext=='woff2'){
     type= 'application/x-font-'+ext
-  }else{
-    type = 'text/'+ext
+  }else if(ext=='gif' || ext=='png'){
+    type='image/'+ext;
   }
-  response.writeHead(200, {
-    'Content-Type': +type //TODO: check if this is right for post as well
-  });
+  else{
+    console.log(ext);
+    type = 'text/'+ext+';'
+  }
+  response.setHeader('Content-Type', type);
 
 }
 
 server.listen(process.env.PORT);
 
 
-function writeAll(response) {
-  response.write('<h1>All the defaultLetters!</h1><ul>');
-  for (var i in conn.letters) {
-    response.write('<li>' + i + ' : ' + conn.letters[i] + '</li>')
-
-  }
-  response.end('</ul>');
-}
 
 function writeDefault(resp) {
   var test = '\u0995\u09A5\u09BE';

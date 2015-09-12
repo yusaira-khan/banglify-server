@@ -7,91 +7,145 @@
   </title>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext' rel='stylesheet'
         type='text/css'>
-  <link href='http://localhost:8080/bangla_font.css' rel='stylesheet'
+  <link href='bangla_font.css' rel='stylesheet'
         type='text/css'>
+  <link rel="stylesheet" href="material.min.css">
+  <script src="/../node_modules/material-design-lite/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <style>
 
-    body {
-
-      margin: 0;
+    body, h1, h2, h3, h4, h5 div, p {
       font-family: Source Sans Pro, Akaash, serif;
+      color: black;
     }
 
-    #original-text-button {
-      margin: 4px auto;
-      background-color: #41ba3e;
-      border-top: none;
-      border-right: none;
-      border-left: none;
-      border-bottom-color: #41b93e;
-      border-bottom-width: 2px;
-      display: block;
+    .mdl-layout__tab, .mdl-layout.is-upgraded .mdl-layout__tab.is-active {
+      color: black;
       font-size: 16px;
-      font-weight: bold;
-      padding: 10px;
-      border-radius: 5px;
-
     }
 
-    .text {
-      white-space: break-word;
-      font-size: 0.5cm;
-      margin: 8px;
-      width: 400px;
-      height: 400px;
-      max-height: 400px;
+    .mdl-demo section.section--center {
+      max-width: 860px
     }
 
-    #spinner {
+    .mdl-layout__content section {
+      position: relative;
+    }
+
+    section .section__circle-container > .section__circle-container__circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      margin: 8px 0px;
+    }
+
+    .section__text {
+      flex-grow: 1;
+      flex-shrink: 0;
+      padding-top: 8px;
+    }
+
+    section .section__text h5 {
+      font-size: inherit;
+      margin: 0px 0px 0.5em;
+    }
+
+    section .section__text h5 {
+      font-family: Source Sans Pro, Akaash, serif;
+      font-size: 20px;
+      line-height: 20px;
+      color: black;
+    }
+
+    .mdl-mega-footer--link-list li {
+      font-size: 18px;
+
+    }
+    .mdl-layout__tab-bar{
+      padding-left: 16px;
       width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 2000000000;
-      background-color: white;
-      top: 0;
-      left: 0;
-      /*margin-top: -8px;
-      margin-left: -8px;*/
     }
-
-    #spinner img {
-      transform: translate(50%, 50%);
-    }
-
-    #error {
+    .mdl-layout__tab-bar-button{
       display: none;
-      color: red;
     }
-
-    #original {
-      color: #424242;
-      border-bottom: dashed #626262 2px;
-    }
-
-    #original:first-child:before {
-      content: 'Original Text:<br/>';
-    }
-
-    .hover {
-      background-color: #ade7ab;
-    }
-
+    .mdl-layout__header-row{padding-left: 40px}
   </style>
 </head>
-<body>
-<h1>Welcome to Banglify!</h1>
+<body class="mdl-demo mdl-color--grey-100 mdl-base">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+    </div>
+    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+<img src="128x128.png"/>
+      <h3>Banglify!</h3>
 
-<h2>Turn text written in Bangla script into it's romanized version in English Script</h2>
+    </div>
+    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+    </div>
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+      <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
+      <a href="#screenshots" class="mdl-layout__tab">ScreenShots</a>
 
-<h2>Use the <a>Chrome Extension</a></h2>
+      <a href="https://chrome.google.com/webstore/detail/banglify/enedgjpjgakkokkngljbipfbdlgiiefc"
+         class="mdl-layout__tab">Download</a>
+      <a href="https://github.com/yusaira-khan/banglify/" class="mdl-layout__tab">Source Code</a>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="mdl-layout__tab-panel is-active" id="overview">
+      <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+        <div class="mdl-card mdl-cell mdl-cell--12-col">
+          <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing" style="margin:auto;">
+            <h4 class="mdl-cell mdl-cell--12-col">
+              Converts Bengali text to the English Script</h4>
+
+            <div class="section__circle-container mdl-cell mdl-cell--1-col mdl-cell--1-col-phone">
+              <div class="section__circle-container__circle mdl-color--primary"></div>
+            </div>
+            <div class="section__text mdl-cell mdl-cell--11-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+              <h5>Download the <a
+                  href="https://chrome.google.com/webstore/detail/banglify/enedgjpjgakkokkngljbipfbdlgiiefc">Chrome
+                Extenstion</a></h5>
+            </div>
+            <div class="section__circle-container mdl-cell mdl-cell--1-col mdl-cell--1-col-phone">
+              <div class="section__circle-container__circle mdl-color--primary"></div>
+            </div>
+            <div class="section__text mdl-cell mdl-cell--11-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+              <h5>See the <a href="https://github.com/yusaira-khan/banglify/">Source Code</a></h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br/><br/>
+      <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="screenshots">
+        <div class="mdl-card mdl-cell mdl-cell--12-col">
+          <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing" >
+            <h4 class="mdl-cell mdl-cell--12-col">
+              <br/>
+              Screenshots:</h4>
+            </div>
+          <img src="screenshots/selecting.gif" alt="Select text and click extension icon" style="margin:10px"/>
+          <br/>
+          <img src="screenshots/hovering.gif"
+               alt="Click on the Button to see original text and hover over text to see differences"
+               style="margin:10px"/>
+        </div>
+      </section>
+    </div>
+    <footer class="mdl-mega-footer">
+      <div class="mdl-mega-footer--bottom-section">
+
+        <ul class="mdl-mega-footer--link-list">
+          <li class="mdl-logo"><a href="mailto:yusaira.khan@mail.mcgill.ca">Contact</a></li>
+          <li><a href="https://raw.githubusercontent.com/yusaira-khan/banglify/master/LICENSE">License</a></li>
+        </ul>
+      </div>
 
 
-<script>
-  /**
-   * TODO: make usage gif
-   * TODO: use jquery
-   * TODO: publish on chrome store
-   */
-</script>
+    </footer>
+  </main>
+
+</div>
 </body>
 </html>
