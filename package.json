@@ -13,6 +13,7 @@
     "url": "https://raw.githubusercontent.com/yusaira-khan/banglify/master/LICENSE"
   },
   "dependencies": {
-    "through2": "2.0.0"
+    "material-design-lite": "^1.0.4-2",
+    "through2": "^2.0.0"
   }
 }

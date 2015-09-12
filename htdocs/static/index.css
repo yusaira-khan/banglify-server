@@ -1,0 +1,68 @@
+body, h1, h2, h3, h4, h5 div, p {
+  font-family: Source Sans Pro, Akaash, serif;
+  color: black;
+}
+
+.mdl-layout__tab, .mdl-layout.is-upgraded .mdl-layout__tab.is-active {
+  color: black;
+  font-size: 16px;
+}
+
+.mdl-demo section.section--center {
+  max-width: 860px
+}
+
+.mdl-layout__content section {
+  position: relative;
+}
+
+section .section__circle-container > .section__circle-container__circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin: 8px 0px;
+}
+
+.section__text {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding-top: 8px;
+}
+
+section .section__text h5 {
+  font-size: inherit;
+  margin: 0px 0px 0.5em;
+}
+
+section .section__text h5 {
+  font-family: Source Sans Pro, Akaash, serif;
+  font-size: 20px;
+  line-height: 20px;
+  color: black;
+}
+
+.mdl-mega-footer--link-list li {
+  font-size: 18px;
+
+}
+
+.mdl-layout__tab-bar {
+  padding-left: 16px;
+  width: 100%;
+}
+
+.mdl-layout__tab-bar-button {
+  display: none;
+}
+
+.mdl-layout__header-row {
+  padding-left: 40px
+}
+
+div#needs-margin.mdl-card__supporting-text {
+  margin: auto;
+}
+
+img {
+  margin: 10px;
+}
