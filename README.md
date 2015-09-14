@@ -1,5 +1,6 @@
 # Banglify!
-A chrome extension that can transilerate Bangla script to the English script.
-[Download](https://chrome.google.com/webstore/detail/banglify/enedgjpjgakkokkngljbipfbdlgiiefc)
+[Server](https://banglify.herokuapp.com/) for Banglify used by the [chrome extension](https://github.com/yusaira-khan/banglify-extension/).
+Converts Bangla text to the English script.
+
 
 

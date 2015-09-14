@@ -6,11 +6,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:yusaira-khan/banglify.git"
+    "url": "git@github.com:yusaira-khan/banglify-server.git"
   },
   "license": {
     "type": "MIT",
-    "url": "https://raw.githubusercontent.com/yusaira-khan/banglify/master/LICENSE"
+    "url": "https://raw.githubusercontent.com/yusaira-khan/banglify-server/master/LICENSE"
   },
   "dependencies": {
     "material-design-lite": "^1.0.4-2",
